@@ -1,0 +1,66 @@
+<!--
+    Author: Ryley Prudhomme
+    Student ID: 041137018
+    Course: CST3106 - Internet Architecture and Web Development
+    Term: Fall 2024
+    Assignment: Assignment 1 Yatzy Singleplayer Game
+    Date: 2024-11-09
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy Game</title>
+    <link rel="stylesheet" href="../CSS/YatzyDesign.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Yatzy Game</h1>
+        <div class="status">
+            <p>Turns Remaining: <span id="turnsRemaining">13</span></p>
+        </div>
+
+        <!-- Dice Area -->
+        <div class="dice-container">
+            <div class="dice" id="die1" data-index="0">1</div>
+            <div class="dice" id="die2" data-index="1">1</div>
+            <div class="dice" id="die3" data-index="2">1</div>
+            <div class="dice" id="die4" data-index="3">1</div>
+            <div class="dice" id="die5" data-index="4">1</div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="rollButton">Roll Dice</button>
+            <button id="restartButton">Restart Game</button>
+        </div>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <h2>Scorecard</h2>
+            <ul id="scoreList">
+                <li data-category="Aces">Aces: <span id="scoreAces">0</span></li>
+                <li data-category="Twos">Twos: <span id="scoreTwos">0</span></li>
+                <li data-category="Threes">Threes: <span id="scoreThrees">0</span></li>
+                <li data-category="Fours">Fours: <span id="scoreFours">0</span></li>
+                <li data-category="Fives">Fives: <span id="scoreFives">0</span></li>
+                <li data-category="Sixes">Sixes: <span id="scoreSixes">0</span></li>
+                <li data-category="Three of a Kind">Three of a Kind: <span id="score3ofAKind">0</span></li>
+                <li data-category="Four of a Kind">Four of a Kind: <span id="score4ofAKind">0</span></li>
+                <li data-category="Full House">Full House: <span id="scoreFullHouse">0</span></li>
+                <li data-category="Small Straight">Small Straight: <span id="scoreSmallStraight">0</span></li>
+                <li data-category="Large Straight">Large Straight: <span id="scoreLargeStraight">0</span></li>
+                <li data-category="Yatzy">Yatzy: <span id="scoreYatzy">0</span></li>
+                <li data-category="Chance">Chance: <span id="scoreChance">0</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../Javascript/YatzyEngine.js"></script>
+    <script src="../Javascript/Dice.js"></script>
+    <script src="../Javascript/YatzyGame.js"></script>
+</body>
+</html>
